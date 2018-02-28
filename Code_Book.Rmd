@@ -1,0 +1,42 @@
+---
+title: "Code Book"
+author: "Hamed Yazarloo"
+date: "February 27, 2018"
+output: html_document
+---
+
+In this code book explains about the method used in this R program to find the needed tidy result table, as well as the data provided.
+
+### Summary
+
+30 people have performed 6 activities and the motion of their body have been recorded. Using this R program the data collected has been processed. 
+
+### Data files provided
+
+* `features.txt`: Names of different movement components
+* `activity_labels.txt`: Names of the 6 different activities.
+
+* `X_train.txt`: A table of 7352 observations of the 561 variables (movement components), for 21 of the 30 people that have been considered as training data.
+* `subject_train.txt`: A one column table of 7352 numbers in the range of 1 to 30 that each one corresponds to the participant person in the observations in `X_train.txt`.
+* `y_train.txt`: A one column table of 7352 numbers in the range of 1 to 6 that each one corresponds to activities of each observation in `X_train.txt`.
+
+* `X_test.txt`: A table of 2947 observations of the 561 variables (movement components), for 9 of the 30 people that have been considered as test data.
+* `subject_test.txt`: A one column table of 2947 numbers in the range of 1-30 that each one corresponds to the participant person in the observations in `X_train.txt`.
+
+* `y_test.txt`: A one column table of 2947 numbers in the range of 1 to 6 that each one corresponds to activities of each observation in `X_test.txt`.
+
+You can read more about the files in `README.txt` and about features in `features_info.txt`.
+Only the above data files are being used in the analysis. All of the other files will be ignored.
+
+### Data processing steps
+
+1. Initializes the program by locating the working directory and loading the necessary packages.
+2. The features file is imported.
+3. Imports and processes the training data. Adds the names of the columns and putting the columns in order.
+4. Imports and processes the test data. Adds the names of the columns and putting the columns in order.
+5. Merges the training and the test sets to create one data set.
+6. Extracts only the measurements on the mean and standard deviation for each measurement.
+7. Uses descriptive activity names to name the activities in the data set.
+8. Appropriately labels the data set with descriptive variable names.
+9. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
